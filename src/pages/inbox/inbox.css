@@ -1,0 +1,83 @@
+.chip{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E8F1FF;
+    color: black;
+}
+.incomingmessagecard{
+    margin-top: 0px;
+    border-bottom-left-radius: 1px;
+    border-top-left-radius: 1px;
+    width: auto;
+    max-width: 200px;
+    background-color: #4C935E;
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.timetextincoming{
+    position: absolute;
+    bottom: -13px;
+    right: 5px;
+}
+.sendmessagecard{
+   border-top-right-radius: 1px;
+   border-bottom-right-radius: 1px;
+    width: auto;
+    max-width: 200px;
+    background-color: #E8F1FF;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    box-shadow: none;
+    float: right;
+    margin-top: 0px;
+}
+.SearchBar{
+    margin: 0;
+    --background: #F5F9FF !important;
+    border-radius: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 70px;
+    box-shadow: none;
+}
+.textareaformessage{
+    background: transparent;
+    color:black;
+    border: 2px solid #E8F1FF;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    padding-top: 6px;
+    border-radius: 30px;
+
+}
+.listmicorsendbutton{
+    float: right;
+    background-color: transparent;
+    margin-right: 5px;
+    margin-top: -4px;
+}
+.micicon{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 100%;
+}
+.attachicon{
+    color: black;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.texterea1{
+     width: 70%;
+    --padding-start:20px;
+    float: left;
+    border: none;
+}

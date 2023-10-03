@@ -1,0 +1,23 @@
+.transactionAvatar{
+    height: 80px;
+    width: 80px;
+    --border-radius: 10px;
+}
+.paidbtn{
+    height: 20px;
+    width: 60px;
+    margin-top: -6px;
+    --background:#167F71;
+    --background-activated: #08a391;
+}
+.companyName{
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 600;
+    font-style:inherit;
+}
+.itemtran{
+    --background: transparent;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+}

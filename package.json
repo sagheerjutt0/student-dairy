@@ -19,6 +19,8 @@
     "ionicons": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-phone-input-2": "^2.15.1",
+    "react-phone-number-input": "^3.3.6",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4"
   },

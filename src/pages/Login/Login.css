@@ -1,0 +1,62 @@
+.silver {
+    --background: #F5F9FF;
+}
+
+.imag-list {
+    height: 100px;
+}
+
+.custom {
+    --background: #FFFFFF;
+    color: black;
+    --placeholder-color: #505050;
+    --border-radius: 10px;
+    --padding-start: 20px;
+    height: 50px;
+}
+
+.eyeicon {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    font-size: 20px;
+    z-index: 1000;
+    color: #545454;
+}
+
+.iconForword {
+    background: white;
+    color: black;
+    padding: 8px;
+    border-radius: 100%;
+    position: absolute;
+    right: -15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.top {
+    margin-top: 0;
+}
+
+.googlelogo {
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.fontsize{
+    font-size: small;
+}
+.textcolor{
+    color: #0961F5;
+    text-decoration:underline;
+    font-size: medium;
+}
+.bold{
+    font-weight: 600;
+}

@@ -1,0 +1,53 @@
+.toolsCard{
+    height: 150px;
+    width: 150px;
+    margin: 0;
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.cameraIcon{
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    margin-top: 5px;
+}
+.cameraText{
+    color: black;
+    text-align: center;
+    margin-top: 0;
+}
+.creaticon{
+    height: 80px;
+    width: 80px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    padding: 10px;
+}
+.btnbottom{
+   margin-bottom: 30px;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.custom-file-upload {
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 19px 17px 10px 10px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+  }
+  .textarea{
+    --background: #FFFFFF;
+    --padding-start: 20px;
+  }
