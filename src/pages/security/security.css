@@ -1,0 +1,23 @@
+.SearchBar1{
+    margin: 0;
+    --background: #F5F9FF !important;
+    border-radius: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 140px;
+    box-shadow: none;
+}
+.btnbottom34{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    --background: #F5F9FF;
+    --background-hover: #F5F9FF;
+    --background-activated: #F5F9FF;
+    --background-focused: #F5F9FF;
+    color: black;
+    border: 2px solid #B4BDC4;
+    border-radius: 30px;
+}

@@ -31,6 +31,11 @@ import Transaction from './pages/transaction/transaction';
 import Inbox from './pages/inbox/inbox';
 import Call from './pages/call/call';
 import Editprofile from './pages/editprofile/editprofile';
+import Paymentoption from './pages/paymentoption/paymentoption';
+import Addnewcard from './pages/addnewcard/addnewcard';
+import Notificationss from './pages/notification/notificationss';
+import Security from './pages/security/security';
+import Invitefriend from './pages/invtefriends/invitefriend';
 
 setupIonicReact();
 
@@ -70,6 +75,21 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/editprofile">
           <Editprofile />
+        </Route>
+        <Route exact path="/paymentoption">
+          <Paymentoption />
+        </Route>
+        <Route exact path="/addnewcard">
+          <Addnewcard />
+        </Route>
+        <Route exact path="/notificationss">
+          <Notificationss />
+        </Route>
+        <Route exact path="/security">
+          <Security />
+        </Route>
+        <Route exact path="/invitefriend">
+          <Invitefriend />
         </Route>
         <Route exact path="/">
           <Redirect to="/home" />

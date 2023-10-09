@@ -9,9 +9,17 @@
     "preview": "vite preview",
     "test.e2e": "cypress run",
     "test.unit": "vitest",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run dev"
   },
   "dependencies": {
+    "@capacitor/app": "5.0.6",
+    "@capacitor/cli": "5.4.1",
+    "@capacitor/core": "5.4.1",
+    "@capacitor/haptics": "5.0.6",
+    "@capacitor/keyboard": "5.0.6",
+    "@capacitor/status-bar": "5.0.6",
     "@ionic/react": "^7.0.0",
     "@ionic/react-router": "^7.0.0",
     "@types/react-router": "^5.1.20",
@@ -19,6 +27,7 @@
     "ionicons": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-languages-select": "^1.0.20",
     "react-phone-input-2": "^2.15.1",
     "react-phone-number-input": "^3.3.6",
     "react-router": "^5.3.4",

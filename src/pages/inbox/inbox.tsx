@@ -9,17 +9,15 @@ function Inbox() {
     const [option,setOption] = useState(Boolean)
 
 
-    useEffect(()=>(
-        sendoption()
-    ))
-    const sendoption =()=>{
-        if(message===""){
+    useEffect(()=>{
+        if(message ===""){
             setOption(true)
         }
         else{
             setOption(false)
         }
-    }
+    },[message])
+
     return (
         <IonPage>
             <IonHeader className='header' mode='md'>
@@ -83,13 +81,13 @@ function Inbox() {
                 <div className='textareaformessage'>
                     <IonTextarea mode='ios'
                         placeholder="Write Message    "
-                        onIonInput={(e: any) => setMessage(e.target)}
+                        onIonInput={(e: any) => setMessage(e.target.value)}
                         className='texterea1'
                         rows={1}
                     ></IonTextarea>
                     <div className='listmicorsendbutton'>
                         {
-                            option === true ? <>
+                            option ? <>
                                 <IonIcon className='attachicon' icon={attachOutline}></IonIcon>
                                 <IonIcon className='micicon' size='large' icon={micOutline}></IonIcon>
                             </> : <>

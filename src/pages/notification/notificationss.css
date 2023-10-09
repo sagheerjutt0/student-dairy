@@ -1,0 +1,10 @@
+.backgroundtrnsparent{
+    --background: transparent;
+}
+.toggle{
+    --track-background:#E8F1FF;
+    --track-border:#B4BDC4;
+    --track-background-checked: #E8F1FF;
+    --handle-background: #E8F1FF;
+    --handle-background-checked: #0961F5;
+}

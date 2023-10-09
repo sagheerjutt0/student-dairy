@@ -1,5 +1,7 @@
 {
   "name": "student-dairy",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react-vite"
 }

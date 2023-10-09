@@ -1,10 +1,11 @@
 import React from 'react'
 import './Profile.css'
-import { IonAvatar, IonBackButton, IonButtons, IonCard, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react'
+import { IonAvatar, IonBackButton, IonButtons, IonCard, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonPage, IonRow, IonTitle, IonToolbar, useIonAlert } from '@ionic/react'
 import Tabs from '../../components/tabs'
 import { chevronForwardOutline, eyeOutline, helpCircleOutline, imageOutline, languageOutline, lockClosedOutline, notificationsOutline, personOutline, shareOutline, walletOutline, warningOutline } from 'ionicons/icons'
 
 function Profile() {
+  const [presentAlert] = useIonAlert();
   return (
     <IonPage>
       <IonHeader className='header' mode='md'>
@@ -33,27 +34,45 @@ function Profile() {
                   <h3 className='functionname' slot='start'>Edit Profile</h3>
                   <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
                 </IonItem>
-                <IonItem lines='none' mode='md'>
+                <IonItem routerLink='/paymentoption' lines='none' mode='md'>
                   <IonIcon className='functionicon' slot='start' icon={walletOutline}></IonIcon>
                   <h3 className='functionname' slot='start'>Payment Option</h3>
                   <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
                 </IonItem>
-                <IonItem lines='none' mode='md'>
+                <IonItem routerLink='/notificationss' lines='none' mode='md'>
                   <IonIcon className='functionicon' slot='start' icon={notificationsOutline}></IonIcon>
                   <h3 className='functionname' slot='start'>Notifications</h3>
                   <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
                 </IonItem>
-                <IonItem lines='none' mode='md'>
+                <IonItem routerLink='/security' lines='none' mode='md'>
                   <IonIcon className='functionicon' slot='start' icon={lockClosedOutline}></IonIcon>
                   <h3 className='functionname' slot='start'>Security</h3>
                   <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
                 </IonItem>
-                <IonItem lines='none' mode='md'>
-                  <IonIcon className='functionicon' slot='start' icon={languageOutline}></IonIcon>
-                  <h3 className='functionname' slot='start'>Language</h3>
-                  <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
-                </IonItem>
-                <IonItem lines='none' mode='md'>
+                <IonItem
+                onClick={() =>
+                  presentAlert({
+                    header: 'On Dark Mode',
+                   
+                    buttons:[
+                      {
+                        text: 'Cancel',
+                        role: 'cancel',
+                        handler: () => {
+                          console.log('Alert canceled');
+                        },
+                      },
+                      {
+                        text: 'OK',
+                        role: 'confirm',
+                        handler: () => {
+                          console.log('Alert confirmed');
+                        },
+                      },
+                    ],
+                  })
+                }
+                lines='none' mode='md'>
                   <IonIcon className='functionicon' slot='start' icon={eyeOutline}></IonIcon>
                   <h3 className='functionname' slot='start'>Dark Mode</h3>
                   <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
@@ -68,7 +87,7 @@ function Profile() {
                   <h3 className='functionname' slot='start'>Help Center</h3>
                   <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
                 </IonItem>
-                <IonItem lines='none' mode='md'>
+                <IonItem routerLink='/invitefriend' lines='none' mode='md'>
                   <IonIcon className='functionicon' slot='start' icon={shareOutline}></IonIcon>
                   <h3 className='functionname' slot='start'>Share With Friends</h3>
                   <IonIcon className='chevronprofile' slot='end' icon={chevronForwardOutline}></IonIcon>
@@ -77,6 +96,7 @@ function Profile() {
             </IonCol>
           </IonRow>
         </IonGrid>
+        
       </IonContent>
       <Tabs />
     </IonPage>
