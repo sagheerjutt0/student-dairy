@@ -10,7 +10,7 @@ function Paymentoption() {
                     <IonButtons slot="start">
                         <IonBackButton defaultHref="#"></IonBackButton>
                     </IonButtons>
-                    <IonTitle>Payment Option</IonTitle>
+                    <IonTitle><b style={{color:'black'}}>Payment Option</b></IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent className='silver ion-padding'>

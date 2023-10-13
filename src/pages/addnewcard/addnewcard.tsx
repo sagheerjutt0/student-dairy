@@ -10,7 +10,7 @@ function Addnewcard() {
                     <IonButtons slot="start">
                         <IonBackButton defaultHref="#"></IonBackButton>
                     </IonButtons>
-                    <IonTitle>Add New Card</IonTitle>
+                    <IonTitle><b style={{color:'black'}}>Add New Card</b></IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent className='silver ion-padding'>

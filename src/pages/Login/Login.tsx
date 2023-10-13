@@ -34,7 +34,7 @@ function Login() {
                     </IonCol>
                     <IonCol size='12'></IonCol>
                     <IonCol size='12'>
-                        <IonButton expand='full' shape='round' mode='ios' color='primary' >
+                        <IonButton routerLink='/home' expand='full' shape='round' mode='ios' color='primary' >
                             <IonLabel>Sign Up</IonLabel> <IonIcon className='iconForword' icon={arrowForward}></IonIcon>
                         </IonButton>
                     </IonCol>

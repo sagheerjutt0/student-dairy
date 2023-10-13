@@ -17,7 +17,7 @@ function Editprofile() {
                     <IonButtons slot="start">
                         <IonBackButton defaultHref="#"></IonBackButton>
                     </IonButtons>
-                    <IonTitle>Edit Profile</IonTitle>
+                    <IonTitle> <b style={{color:'black'}}>Edit Profile</b> </IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent className='silver ion-padding'>
@@ -31,38 +31,41 @@ function Editprofile() {
 
                     </IonCol>
                     <IonCol size='12'>
-                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px" }} lines='none'>
-                            <IonInput type='text' className='custom boxshadow' placeholder='Full Name'></IonInput>
+                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px",height:'45px' }} lines='none'>
+                            <IonInput style={{marginTop:'-2px'}} type='text' className='custom boxshadow' placeholder='Full Name'></IonInput>
                         </IonItem>
                     </IonCol>
                     <IonCol size='12'>
-                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px" }} lines='none'>
-                            <IonInput type='text' className='custom boxshadow' placeholder='Nick Name'></IonInput>
+                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px",height:'45px' }} lines='none'>
+                            <IonInput style={{marginTop:'-2px'}} type='text' className='custom boxshadow' placeholder='Nick Name'></IonInput>
                         </IonItem>
                     </IonCol>
                     <IonCol size='12'>
-                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px" }} lines='none'>
-                            <IonInput type='date' className='custom boxshadow pdingright' placeholder='date of birth'></IonInput>
+                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px",height:'45px' }} lines='none'>
+                            <IonInput style={{marginTop:'-2px'}} type='date' className='custom ' placeholder='date of birth'></IonInput>
                         </IonItem>
                     </IonCol>
                     <IonCol size='12'>
-                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px" }} lines='none'>
-                            <IonInput type='email' className='custom boxshadow' placeholder='Email'></IonInput>
+                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px",height:'45px' }} lines='none'>
+                            <IonInput style={{marginTop:'-2px'}} type='email' className='custom boxshadow' placeholder='Email'></IonInput>
                         </IonItem>
                     </IonCol>
 
                     <IonCol size='12'>
-                        <IonSelect
-                            style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px" }}
-                            className='slect boxshadow' mode='md' interface="action-sheet" aria-label='none' placeholder='Gender' >
-                            <IonSelectOption>Male</IonSelectOption>
-                            <IonSelectOption >Female</IonSelectOption>
-                            <IonSelectOption >Others</IonSelectOption>
-                        </IonSelect>
+                        <IonItem lines='none' style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px", height: "45px" }}>
+                            <IonSelect
+                                style={{marginTop:'-5px'}}
+                                mode='md' interface="action-sheet" aria-label='none' placeholder='Gender' >
+                                <IonSelectOption>Male</IonSelectOption>
+                                <IonSelectOption >Female</IonSelectOption>
+                                <IonSelectOption >Others</IonSelectOption>
+                            </IonSelect>
+                        </IonItem>
                     </IonCol>
                     <IonCol size='12'>
-
-                        <PhoneInput inputStyle={{ width: "100%", height: "50px", border: "none", boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px" }} country={"pk"} />
+                        <IonItem style={{ boxShadow: "rgba(17, 17, 26, 0.1) 0px 0px 16px", borderRadius: "10px", marginTop: "10px", height: "45px" }} lines='none'>
+                            <PhoneInput inputStyle={{  border: "none",  }} country={"pk"} />
+                        </IonItem>
                     </IonCol>
                     <IonCol size='12'>
                         <IonButton expand='full' shape='round' mode='ios' color='primary' >

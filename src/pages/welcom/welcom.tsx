@@ -8,12 +8,14 @@ function Welcom() {
     const signupPage = () => {
         history.push('/login')
     }
+  
+
     return (
         <IonPage>
             <IonList className='IonPage'>
 
 
-                <IonImg src="src\images\logo tranperant.png" className='welcomimage'></IonImg>
+                <IonImg onClick={()=>history.push('/login')} src="src\images\logo tranperant.png" className='welcomimage'></IonImg>
                
             </IonList>
         </IonPage>

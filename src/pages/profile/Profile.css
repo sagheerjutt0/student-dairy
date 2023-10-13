@@ -1,8 +1,8 @@
 .divprofile{
     position: absolute;
-    top: -20px;
+    top: 0px;
     z-index: 1;
-    width: 100%;
+    width: 92%;
 }
 .profilemaincard{
     margin: 0;

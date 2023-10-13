@@ -13,12 +13,21 @@
     background-color: #4C935E;
     color: white;
     padding-left: 10px;
-    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    float: left;
+    padding-right: 10px;
+    margin: 0;
 }
 .timetextincoming{
-    position: absolute;
+    /* position: absolute;
     bottom: -13px;
-    right: 5px;
+    right: 5px; */
+    float: right;
+    margin: 0px;
+    margin-bottom: 0px;
+    margin-top: -10px;
+    margin-left: 20px;
 }
 .sendmessagecard{
    border-top-right-radius: 1px;
@@ -29,10 +38,11 @@
     color: black;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     box-shadow: none;
     float: right;
     margin-top: 0px;
+    margin: 0;
 }
 .SearchBar{
     margin: 0;

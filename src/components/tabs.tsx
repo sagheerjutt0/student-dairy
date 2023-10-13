@@ -1,4 +1,4 @@
-import { IonCard, IonCol, IonIcon, IonRow } from '@ionic/react'
+import { IonCard, IonCol, IonIcon, IonLabel, IonRow } from '@ionic/react'
 import React from 'react'
 import './tabs.css'
 import { chatbubbleEllipses, chatbubbleEllipsesOutline, hammer, hammerOutline, home, homeOutline, person, personOutline, wallet, walletOutline } from 'ionicons/icons'
@@ -13,45 +13,55 @@ function Tabs() {
           <IonCol>
             <IonCard className='tabcard' button routerLink='/home'>
               <IonRow>
-                <IonIcon className='tabsIcon' style={{ color: location.pathname === "/home" ? '#167F71' : "black" }} icon={location.pathname === "/home" ? home : homeOutline}></IonIcon>
+                <IonIcon className='tabsIcon' color={location.pathname === "/home" ? 'primary' : "dark"} icon={location.pathname === "/home" ? home : homeOutline}></IonIcon>
               </IonRow>
-              <p style={{ color: location.pathname === "/home" ? '#167F71' : "black", marginTop: "5px",fontSize:"12px" }} className='cen top'>Home</p>
+              <IonRow>
+                <IonLabel color={location.pathname === "/home" ? 'primary' : "dark"} style={{ marginTop: "5px", fontSize: "12px", marginLeft: "auto", marginRight: "auto" }}>Home</IonLabel>
+              </IonRow>
             </IonCard>
           </IonCol>
           <IonCol>
             <IonCard className='tabcard' button routerLink='/tools'>
               <IonRow>
-                <IonIcon style={{ color: location.pathname === "/tools" ? '#167F71' : "black" }} className='tabsIcon' icon={location.pathname === "/tools" ? hammer : hammerOutline}></IonIcon>
+                <IonIcon color={location.pathname === "/tools" ? 'primary' : "dark"} className='tabsIcon' icon={location.pathname === "/tools" ? hammer : hammerOutline}></IonIcon>
               </IonRow>
-              <p style={{ color: location.pathname === "/tools" ? '#167F71' : "black", marginTop: "5px",fontSize:"12px" }} className='cen top'>Tools</p>
+              <IonRow>
+                <IonLabel color={location.pathname === "/tools" ? 'primary' : "dark"} style={{ marginTop: "5px", fontSize: "12px", marginLeft: "auto", marginRight: "auto" }}>Tools</IonLabel>
+              </IonRow>
             </IonCard>
           </IonCol>
           <IonCol>
             <IonCard className='tabcard' button routerLink='/chats'>
               <IonRow>
-                <IonIcon style={{ color: location.pathname === "/chats" ? '#167F71' : "black" }} className='tabsIcon' icon={location.pathname === "/chats" ? chatbubbleEllipses : chatbubbleEllipsesOutline}></IonIcon>
+                <IonIcon color={location.pathname === "/chats" ? 'primary' : "dark"} className='tabsIcon' icon={location.pathname === "/chats" ? chatbubbleEllipses : chatbubbleEllipsesOutline}></IonIcon>
               </IonRow>
-              <p style={{ color: location.pathname === "/chats" ? '#167F71' : "black", marginTop: "5px",fontSize:"12px" }} className='cen top'>Chats</p>
+              <IonRow>
+                <IonLabel color={location.pathname === "/chats" ? 'primary' : "dark"} style={{ marginTop: "5px", fontSize: "12px", marginLeft: "auto", marginRight: "auto" }}>Chats</IonLabel>
+              </IonRow>
             </IonCard>
           </IonCol>
           <IonCol>
             <IonCard className='tabcard' button routerLink='/transaction'>
               <IonRow>
-                <IonIcon style={{ color: location.pathname === "/transaction" ? '#167F71' : "black" }} className='tabsIcon' icon={location.pathname === "/transaction" ? wallet : walletOutline}></IonIcon>
+                <IonIcon color={location.pathname === "/transaction" ? 'primary' : "dark"} className='tabsIcon' icon={location.pathname === "/transaction" ? wallet : walletOutline}></IonIcon>
               </IonRow>
-              <p style={{ color: location.pathname === "/transaction" ? '#167F71' : "black", marginTop: "5px",fontSize:"12px" }} className='cen top'>Transaction</p>
+              <IonRow>
+                <IonLabel color={location.pathname === "/transaction" ? 'primary' : "dark"} style={{ marginTop: "5px", fontSize: "12px", marginLeft: "auto", marginRight: "auto" }}>Transaction</IonLabel>
+              </IonRow>
             </IonCard>
           </IonCol>
           <IonCol>
             <IonCard className='tabcard' button routerLink='/profile'>
               <IonRow>
-                <IonIcon style={{ color: location.pathname === "/profile" ? '#167F71' : "black" }} className='tabsIcon' icon={location.pathname === "/profile" ? person : personOutline}></IonIcon>
+                <IonIcon color={location.pathname === "/profile" ? 'primary' : "dark"} className='tabsIcon' icon={location.pathname === "/profile" ? person : personOutline}></IonIcon>
               </IonRow>
-              <p style={{ color: location.pathname === "/profile" ? '#167F71' : "black", marginTop: "5px",fontSize:"12px" }} className='cen top'>Profile</p>
+              <IonRow>
+                <IonLabel color={location.pathname === "/profile" ? 'primary' : "dark"} style={{ marginTop: "5px", fontSize: "12px", marginLeft: "auto", marginRight: "auto" }}>Profile</IonLabel>
+              </IonRow>
             </IonCard>
           </IonCol>
         </IonRow>
-      </IonCard>
+      </IonCard >
     </>
   )
 }

@@ -1,7 +1,7 @@
-import { IonBackButton, IonButton, IonButtons, IonCard, IonCol, IonContent, IonHeader, IonIcon, IonInput, IonLabel, IonModal, IonPage, IonRow, IonTextarea, IonTitle, IonToolbar } from '@ionic/react'
+import { IonBackButton, IonButton, IonButtons, IonCard, IonCol, IonContent, IonHeader, IonIcon, IonImg, IonInput, IonLabel, IonModal, IonPage, IonRow, IonTextarea, IonTitle, IonToolbar } from '@ionic/react'
 import React, { useState } from 'react'
 import Tabs from '../../components/tabs'
-import { arrowForward, cameraOutline, close, cloudUpload, cloudUploadOutline, createOutline, documentOutline, scanCircleOutline } from 'ionicons/icons'
+import { arrowForward, camera, cameraOutline, close, cloudUpload, cloudUploadOutline, create, createOutline, document, documentOutline, scanCircle, scanCircleOutline } from 'ionicons/icons'
 import './Tools.css'
 
 function Tools() {
@@ -10,38 +10,42 @@ function Tools() {
   return (
     <IonPage>
       <IonHeader className='header' mode='md'>
-        <IonToolbar className='silver'>
+        <IonToolbar color='light'>
           <IonButtons slot="start">
             <IonBackButton defaultHref="#"></IonBackButton>
           </IonButtons>
-          <IonTitle>Tools</IonTitle>
+          <IonTitle><b style={{color:'black'}}>Tools</b></IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className='silver ion-padding'>
+      <IonContent color='light' className=' ion-padding'>
         <IonRow>
-          <IonCol size='6'>
-            <IonCard onClick={() => { setIsOpen(true), setState("camera") }} className='toolsCard'>
-              <IonIcon className='cameraIcon' icon={cameraOutline}></IonIcon>
-              <h3 className='cameraText'>Camera</h3>
-            </IonCard>
+          <IonCol onClick={() => { setIsOpen(true), setState("camera") }} size='6' sizeMd='3'>
+            <IonRow>
+              <IonImg className='cameraIcon cen' src='src/images/smartphone.png'>
+              </IonImg>
+            </IonRow>
+            <h3 color='primary' className='cameraText'>Camera</h3>
           </IonCol>
-          <IonCol size='6'>
-            <IonCard onClick={() => { setIsOpen(true), setState("scaner") }} className='toolsCard'>
-              <IonIcon className='cameraIcon' icon={scanCircleOutline}></IonIcon>
-              <h3 className='cameraText'>Scaner</h3>
-            </IonCard>
+          <IonCol onClick={() => { setIsOpen(true), setState("scaner") }} size='6' sizeMd='3'>
+            <IonRow>
+            <IonImg className='cameraIcon cen' src='src/images/scan.png'>
+              </IonImg>
+            </IonRow>
+            <h3 color='primary' className='cameraText'>Scaner</h3>
           </IonCol>
-          <IonCol size='6'>
-            <IonCard onClick={() => { setIsOpen(true), setState("file") }} className='toolsCard'>
-              <IonIcon className='cameraIcon' icon={documentOutline}></IonIcon>
-              <h3 className='cameraText'>Chose file</h3>
-            </IonCard>
+          <IonCol onClick={() => { setIsOpen(true), setState("file") }} size='6' sizeMd='3'>
+            <IonRow>
+            <IonImg className='cameraIcon cen' src='src/images/doc.png'>
+              </IonImg>
+            </IonRow>
+            <h3 color='primary' className='cameraText'>Chose file</h3>
           </IonCol>
-          <IonCol size='6'>
-            <IonCard onClick={() => { setIsOpen(true), setState("text") }} className='toolsCard'>
-              <IonIcon className='creaticon' icon={createOutline}></IonIcon>
-              <h3 className='cameraText'>Write Text</h3>
-            </IonCard>
+          <IonCol onClick={() => { setIsOpen(true), setState("text") }} size='6' sizeMd='3'>
+            <IonRow>
+            <IonImg className='cameraIcon cen' src='src/images/notepad.png'>
+              </IonImg>
+            </IonRow>
+            <h3 color='primary' className='cameraText'>Write Text</h3>
           </IonCol>
         </IonRow>
         {/* xsx */}

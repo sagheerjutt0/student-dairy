@@ -21,7 +21,7 @@ function Signup() {
                     <IonButtons slot="start">
                         <IonBackButton defaultHref="#"></IonBackButton>
                     </IonButtons>
-                    <IonTitle>Fill Your Profile</IonTitle>
+                    <IonTitle><b style={{color:'black'}}>Fill Your Profile</b></IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent className='silver ion-padding'>

@@ -10,7 +10,7 @@ function Notificationss() {
           <IonButtons slot="start">
             <IonBackButton defaultHref="#"></IonBackButton>
           </IonButtons>
-          <IonTitle>Notifications</IonTitle>
+          <IonTitle><b style={{color:'black'}}>Notifications</b></IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className='silver ion-padding'>
@@ -18,47 +18,47 @@ function Notificationss() {
           <IonRow>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>Special Offer</IonToggle>
+                <IonToggle color='primary' className='toggle'>Special Offer</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>Sound</IonToggle>
+                <IonToggle color='primary' className='toggle'>Sound</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>Vibrate</IonToggle>
+                <IonToggle color='primary' className='toggle'>Vibrate</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>Genral Notification</IonToggle>
+                <IonToggle color='primary' className='toggle'>Genral Notification</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>Promo & Discount</IonToggle>
+                <IonToggle color='primary' className='toggle'>Promo & Discount</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>Payment Options</IonToggle>
+                <IonToggle color='primary' className='toggle'>Payment Options</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>App Update</IonToggle>
+                <IonToggle color='primary' className='toggle'>App Update</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>New Service Availabel</IonToggle>
+                <IonToggle color='primary' className='toggle'>New Service Availabel</IonToggle>
               </IonItem>
             </IonCol>
             <IonCol size='12'>
               <IonItem lines='none' className='backgroundtrnsparent'>
-                <IonToggle className='toggle'>New Tips Availabel</IonToggle>
+                <IonToggle color='primary' className='toggle'>New Tips Availabel</IonToggle>
               </IonItem>
             </IonCol>
           </IonRow>

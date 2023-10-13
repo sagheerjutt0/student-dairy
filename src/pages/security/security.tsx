@@ -11,7 +11,7 @@ function Security() {
                     <IonButtons slot="start">
                         <IonBackButton defaultHref="#"></IonBackButton>
                     </IonButtons>
-                    <IonTitle>Security</IonTitle>
+                    <IonTitle> <b style={{color:'black'}}>Security</b> </IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent className='silver ion-padding'>
@@ -19,17 +19,17 @@ function Security() {
                     <IonRow>
                         <IonCol size='12'>
                             <IonItem lines='none' className='backgroundtrnsparent'>
-                                <IonToggle className='toggle'>Remember Me</IonToggle>
+                                <IonToggle color='primary'>Remember Me</IonToggle>
                             </IonItem>
                         </IonCol>
                         <IonCol size='12'>
                             <IonItem lines='none' className='backgroundtrnsparent'>
-                                <IonToggle className='toggle'>Biometric Id</IonToggle>
+                                <IonToggle color='primary'>Biometric Id</IonToggle>
                             </IonItem>
                         </IonCol>
                         <IonCol size='12'>
                             <IonItem lines='none' className='backgroundtrnsparent'>
-                                <IonToggle className='toggle'>Face ID</IonToggle>
+                                <IonToggle color='primary' >Face ID</IonToggle>
                             </IonItem>
                         </IonCol>
                         <IonCol>
