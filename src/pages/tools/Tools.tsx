@@ -3,10 +3,25 @@ import React, { useState } from 'react'
 import Tabs from '../../components/tabs'
 import { arrowForward, camera, cameraOutline, close, cloudUpload, cloudUploadOutline, create, createOutline, document, documentOutline, scanCircle, scanCircleOutline } from 'ionicons/icons'
 import './Tools.css'
+import ScanbotSDK from 'cordova-plugin-scanbot-sdk';
+import CameraOpen from '../../components/cameraOpen'
+// import PdfGenerator from '../../components/PdfGenerator'
 
 function Tools() {
   const [isOpen, setIsOpen] = useState(false);
   const [state, setState] = useState("");
+  const [scannedImage, setScannedImage] = useState();
+
+  // const scanDocument = async () => {
+  //   // start the document scanner
+  //   const  {scannedImages}  = await DocumentScanner.scanDocument()
+  //   // setScannedImage(scannedImages)
+  //   // get back an array with scanned image file paths
+  //   // if (scannedImages.length > 0) {
+  //   //   // set the img src, so we can view the first scanned image
+  //   //   setScannedImage(scannedImages[0])
+  //   // }
+  // }
   return (
     <IonPage>
       <IonHeader className='header' mode='md'>
@@ -14,10 +29,13 @@ function Tools() {
           <IonButtons slot="start">
             <IonBackButton defaultHref="#"></IonBackButton>
           </IonButtons>
-          <IonTitle><b style={{color:'black'}}>Tools</b></IonTitle>
+          <IonTitle><b style={{ color: 'black' }}>Tools</b></IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent color='light' className=' ion-padding'>
+
+      {/* <PdfGenerator/> */}
+
         <IonRow>
           <IonCol onClick={() => { setIsOpen(true), setState("camera") }} size='6' sizeMd='3'>
             <IonRow>
@@ -28,21 +46,21 @@ function Tools() {
           </IonCol>
           <IonCol onClick={() => { setIsOpen(true), setState("scaner") }} size='6' sizeMd='3'>
             <IonRow>
-            <IonImg className='cameraIcon cen' src='src/images/scan.png'>
+              <IonImg className='cameraIcon cen' src='src/images/scan.png'>
               </IonImg>
             </IonRow>
             <h3 color='primary' className='cameraText'>Scaner</h3>
           </IonCol>
           <IonCol onClick={() => { setIsOpen(true), setState("file") }} size='6' sizeMd='3'>
             <IonRow>
-            <IonImg className='cameraIcon cen' src='src/images/doc.png'>
+              <IonImg className='cameraIcon cen' src='src/images/doc.png'>
               </IonImg>
             </IonRow>
             <h3 color='primary' className='cameraText'>Chose file</h3>
           </IonCol>
           <IonCol onClick={() => { setIsOpen(true), setState("text") }} size='6' sizeMd='3'>
             <IonRow>
-            <IonImg className='cameraIcon cen' src='src/images/notepad.png'>
+              <IonImg className='cameraIcon cen' src='src/images/notepad.png'>
               </IonImg>
             </IonRow>
             <h3 color='primary' className='cameraText'>Write Text</h3>
@@ -61,9 +79,8 @@ function Tools() {
           <IonContent className=" silver ion-padding">
             {
               state === "camera" ? <>
-                <IonButton expand='full' shape='round' mode='ios' color='primary' >
-                  <IonLabel>Open Camera</IonLabel> <IonIcon className='iconForword' icon={arrowForward}></IonIcon>
-                </IonButton>
+
+                <CameraOpen />
                 <br />
                 <IonInput className='custom' placeholder='write aditional text max cracter (30)' maxlength={30}></IonInput>
               </> : state === "scaner" ? <>

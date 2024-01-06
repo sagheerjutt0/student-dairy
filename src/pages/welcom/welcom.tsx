@@ -15,7 +15,7 @@ function Welcom() {
             <IonList className='IonPage'>
 
 
-                <IonImg onClick={()=>history.push('/login')} src="src\images\logo tranperant.png" className='welcomimage'></IonImg>
+                <IonImg onClick={()=>history.push('/login')} src="src\images\wap dairy 2.psd" className='welcomimage'></IonImg>
                
             </IonList>
         </IonPage>
