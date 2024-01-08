@@ -1,112 +1,52 @@
-// // src/pages/PdfGenerator.tsx
-// import React, { useState, useRef, useCallback } from 'react';
-// import { IonButton, IonImg } from '@ionic/react';
-// import Tesseract from 'tesseract.js';
-// import ReactEasyCrop from 'react-easy-crop';
-// import jsPDF from 'jspdf';
+// src/pages/PdfGenerator.tsx
+import { IonButton, IonImg } from '@ionic/react';
+import React, { useState } from 'react';
+import { Capacitor, Plugins } from '@capacitor/core';
 
-// const PdfGenerator: React.FC = () => {
-//   const [selectedImages, setSelectedImages] = useState<File[]>([]);
-//   const [galleryVisible, setGalleryVisible] = useState(false);
-//   const [crop, setCrop] = useState({ x: 0, y: 0, width: 100, height: 100 });
+const { DocumentScanner, Camera } = Plugins;
 
-//   const fileInputRef = useRef<HTMLInputElement>(null);
+const PdfGenerator: React.FC = () => {
+  const [scannedImages, setScannedImages] = useState<string[]>([]);
 
-//   const openGallery = () => {
-//     if (fileInputRef.current) {
-//       fileInputRef.current.click();
-//     }
-//   };
+  const scanDocument = async () => {
+    if (Capacitor.isPluginAvailable('DocumentScanner')) {
+      const result = await DocumentScanner.scanDocument({
+        letUserAdjustCrop: false,
+      });
 
-//   const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
-//     const files = event.target.files;
+      // Check if scannedImages is defined before accessing its properties
+      if (result && result.scannedImages && result.scannedImages.length > 0) {
+        setScannedImages(result.scannedImages);
+      }
+    } else {
+      // Handle the web platform case or show a message that the feature is not supported
+      console.warn('Document scanning is not supported on the web.');
 
-//     if (files) {
-//       const fileArray = Array.from(files);
-//       setSelectedImages(fileArray);
+      // For demonstration purposes, you can use the Capacitor Camera plugin on the web
+      const image = await Camera.getPhoto({
+        quality: 90,
+        allowEditing: false,
+        resultType: 'dataUrl',
+        source: 'camera',
+      });
 
-//       if (fileArray.length > 0) {
-//         await recognizeText(fileArray[0]);
-//       }
+      setScannedImages([image.dataUrl!]);
+    }
+  };
 
-//       setGalleryVisible(true);
-//     }
-//   };
+  return (
+    <div>
+      <IonButton onClick={scanDocument}>Scan Document</IonButton>
 
-//   const recognizeText = async (file: File) => {
-//     const { data: { text } } = await Tesseract.recognize(
-//       URL.createObjectURL(file),
-//       'eng',
-//       { logger: info => console.log(info) }
-//     );
+      {scannedImages.length > 0 && (
+        <div>
+          {scannedImages.map((image, index) => (
+            <IonImg key={index} src={image} alt={`Scanned Image ${index + 1}`} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
-//     console.log('Recognized Text:', text);
-//   };
-
-//   const onCropChange = (newCrop: React.SetStateAction<{ x: number; y: number; width: number; height: number; }>) => {
-//     setCrop(newCrop);
-//   };
-
-//   const onCropComplete = useCallback((croppedArea: any, croppedAreaPixels: any) => {
-//     const highlightedText = extractHighlightedText(croppedAreaPixels);
-//     console.log('Highlighted Text:', highlightedText);
-//   }, [selectedImages]);
-
-//   const extractHighlightedText = (croppedAreaPixels: any) => {
-//     // Process croppedAreaPixels to get highlighted text information
-//     // For simplicity, let's assume the text is highlighted with a color, and we detect pixels with that color.
-
-//     return 'Highlighted Text';
-//   };
-
-//   const generatePDF = () => {
-//     const doc = new jsPDF();
-
-//     for (let i = 0; i < selectedImages.length; i++) {
-//       const file = selectedImages[i];
-//       const img = new Image();
-//       img.src = URL.createObjectURL(file);
-
-//       const width = doc.internal.pageSize.getWidth() - 20;
-//       const height = (width / img.width) * img.height;
-
-//       if (i > 0) {
-//         doc.addPage();
-//       }
-
-//       doc.addImage(img, 'JPEG', 10, 10, width, height);
-//     }
-
-//     doc.save('images.pdf');
-//   };
-
-//   return (
-//     <div>
-//       <IonButton onClick={openGallery}>Pick Images</IonButton>
-//       <input
-//         ref={fileInputRef}
-//         type="file"
-//         accept="image/*"
-//         multiple
-//         style={{ display: 'none' }}
-//         onChange={handleFileChange}
-//       />
-//       {galleryVisible && selectedImages.length > 0 && (
-//         <div>
-//           <IonImg src={URL.createObjectURL(selectedImages[0])} alt={`Selected`} />
-//           <ReactEasyCrop
-//             image={URL.createObjectURL(selectedImages[0])}
-//             crop={crop}
-//             onCropComplete={onCropComplete}
-//             zoom={1} // Add a default zoom level
-//             onZoomChange={() => { }} // Add a placeholder function for onZoomChange
-//             aspect={0}
-//           />
-//           <IonButton onClick={generatePDF}>Generate PDF</IonButton>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default PdfGenerator;
+export default PdfGenerator;

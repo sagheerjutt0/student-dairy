@@ -5,7 +5,7 @@ import { arrowForward, camera, cameraOutline, close, cloudUpload, cloudUploadOut
 import './Tools.css'
 import ScanbotSDK from 'cordova-plugin-scanbot-sdk';
 import CameraOpen from '../../components/cameraOpen'
-// import PdfGenerator from '../../components/PdfGenerator'
+import PdfGenerator from '../../components/PdfGenerator'
 
 function Tools() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ function Tools() {
       </IonHeader>
       <IonContent color='light' className=' ion-padding'>
 
-      {/* <PdfGenerator/> */}
+      <PdfGenerator/>
 
         <IonRow>
           <IonCol onClick={() => { setIsOpen(true), setState("camera") }} size='6' sizeMd='3'>
