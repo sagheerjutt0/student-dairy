@@ -6,6 +6,10 @@ import './Tools.css'
 import ScanbotSDK from 'cordova-plugin-scanbot-sdk';
 import CameraOpen from '../../components/cameraOpen'
 import PdfGenerator from '../../components/PdfGenerator'
+import tool1 from '../../images/scan.png'
+import tool2 from '../../images/smartphone.png'
+import tool3 from '../../images/doc.png'
+import tool4 from '../../images/notepad.png'
 
 function Tools() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,28 +43,28 @@ function Tools() {
         <IonRow>
           <IonCol onClick={() => { setIsOpen(true), setState("camera") }} size='6' sizeMd='3'>
             <IonRow>
-              <IonImg className='cameraIcon cen' src='src/images/smartphone.png'>
+              <IonImg className='cameraIcon cen' src={tool2}>
               </IonImg>
             </IonRow>
             <h3 color='primary' className='cameraText'>Camera</h3>
           </IonCol>
           <IonCol onClick={() => { setIsOpen(true), setState("scaner") }} size='6' sizeMd='3'>
             <IonRow>
-              <IonImg className='cameraIcon cen' src='src/images/scan.png'>
+              <IonImg className='cameraIcon cen' src={tool1}>
               </IonImg>
             </IonRow>
             <h3 color='primary' className='cameraText'>Scaner</h3>
           </IonCol>
           <IonCol onClick={() => { setIsOpen(true), setState("file") }} size='6' sizeMd='3'>
             <IonRow>
-              <IonImg className='cameraIcon cen' src='src/images/doc.png'>
+              <IonImg className='cameraIcon cen' src={tool3}>
               </IonImg>
             </IonRow>
             <h3 color='primary' className='cameraText'>Chose file</h3>
           </IonCol>
           <IonCol onClick={() => { setIsOpen(true), setState("text") }} size='6' sizeMd='3'>
             <IonRow>
-              <IonImg className='cameraIcon cen' src='src/images/notepad.png'>
+              <IonImg className='cameraIcon cen' src={tool4}>
               </IonImg>
             </IonRow>
             <h3 color='primary' className='cameraText'>Write Text</h3>
