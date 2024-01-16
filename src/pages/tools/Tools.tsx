@@ -1,7 +1,7 @@
 import { IonBackButton, IonButton, IonButtons, IonCard, IonCol, IonContent, IonHeader, IonIcon, IonImg, IonInput, IonLabel, IonModal, IonPage, IonRow, IonTextarea, IonTitle, IonToolbar } from '@ionic/react'
 import React, { useState } from 'react'
 import Tabs from '../../components/tabs'
-import { arrowForward, camera, cameraOutline, close, cloudUpload, cloudUploadOutline, create, createOutline, document, documentOutline, scanCircle, scanCircleOutline } from 'ionicons/icons'
+import { arrowForward, camera, cameraOutline, close, cloudUpload, cloudUploadOutline, create, createOutline, document, documentOutline, scanCircle, scanCircleOutline } from 'ionicons/icons';
 import './Tools.css'
 import ScanbotSDK from 'cordova-plugin-scanbot-sdk';
 import CameraOpen from '../../components/cameraOpen'
